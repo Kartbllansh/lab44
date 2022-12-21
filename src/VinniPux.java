@@ -20,7 +20,7 @@ DullPlace dull = new DullPlace("Снежно", -20);
     int powerWind=dull.getPowerWind();
     @Override
     public void sitDown() {
-        if (touch <0.3 | powerWind>6) {
+        if (touch <0.3 & powerWind>6) {
             try {
                 throw new FallException();
             } catch (FallException f) {
@@ -102,6 +102,10 @@ else{
             }
         }
     }
+    public String toString(){
+        return getClass().getName()+ " желает удачи";
+    }
+
 }
 
 

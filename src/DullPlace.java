@@ -24,6 +24,7 @@ public int humidity = rd.nextInt(8) +1;
         this.tmp = tmp;
 
     }
+    public DullPlace(){}
 
     public class Forest {
         public String statussnow;
@@ -32,6 +33,7 @@ public int humidity = rd.nextInt(8) +1;
             this.statussnow = statussnow;
             Forest.tmp =tmp;
         }
+        public Forest(){}
         public void cold(){
             if(powerWind>8){
             System.out.print(", но все еще было ОЧЕНЬ холодно.");
@@ -58,13 +60,18 @@ public int humidity = rd.nextInt(8) +1;
 public int hight = 2;
            }
         }
-      /*  DullPlace dl = new DullPlace("aaa", -20);
-    DullPlace.Forest fr = dl.new Forest("Не идет снег", -25);
+
 
     public boolean equals(Object obj){
         DullPlace.Forest ft = (DullPlace.Forest) obj; //downcasting
         return this.tmp > DullPlace.Forest.tmp;
-    } */
-
+    }
+public void sss(){
+        DullPlace dullPlace = new DullPlace();
+    DullPlace.Forest forest = dullPlace.new Forest();
+        if(dullPlace.equals(forest)){
+            System.out.println("Герои зашли в лес, в котором было более тепло");
+        }
+}
         }
 

@@ -59,4 +59,5 @@ public class They extends Person {
     public void contTalk(){
         System.out.print("и "+getName()+" смогли продолжить разговор.");
     }
+
 }

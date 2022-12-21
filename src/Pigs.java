@@ -18,7 +18,7 @@ public class Pigs extends Person implements HeBother {
 
     @Override
     public void sitDown() {
-        if (touch <0.4 | powerWind >6) {
+        if (touch <0.4 & powerWind >6) {
             try {
                 throw new FallException();
             } catch (FallException f) {
@@ -43,10 +43,6 @@ public class Pigs extends Person implements HeBother {
            System.out.print(" и ему это начинало надоедать");
        }
    }; */
-    @Override
-    public String toString() {
-        return "Поросенок";
-    }
     //Pigs pigs = new Pigs("jjj", 100);
     @Override
     public int check(int HPHot) {

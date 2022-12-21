@@ -2,10 +2,12 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-       They th = new They("они") ;
-       VinniPux pux = new VinniPux("Винни-Пух", 100);
-       Pigs pg = new Pigs("Пятачок", 100);
+       Person th = new They("они") ;
+       Person pux = new VinniPux("Винни-Пух", 100);
+       Person pg = new Pigs("Пятачок", 100);
      DullPlace dullPlace = new DullPlace("Снег идет", -25);
+       DullPlace.Forest forest = dullPlace.new Forest("Не идет снег", -15);
+       DullPlace.Forest.Garden garden = forest.new Garden();
         th.goToPlace();
         ShotSound shotSound = new ShotSound() {
            @Override
@@ -16,13 +18,14 @@ public class Main {
         pux.check(pux.HPHot); //dobavit
         pux.goToPlace();
         pg.goToPlace();
-        pg.toString();
-        Pigs.Ears ear = pg.new Ears();
+        Pigs.Ears ear = ((Pigs)pg).new Ears();
+
         ear.statussnow();
-        pg.bother();
+        ((Pigs)pg).bother();
         th.turn();
         pux.turn();
         pg.turn();
+        dullPlace.sss();
         pux.sayAbout();
         pg.sayAbout();
         pg.check(pg.HPHot);
@@ -32,13 +35,12 @@ public class Main {
         pg.sitDown();
         Snow snow = new Snow();
         snow.notGoSnow();
-        DullPlace.Forest forest = dullPlace.new Forest("Не идет снег", -15);
-        DullPlace.Forest.Garden garden = forest.new Garden();
+
         forest.cold();
         garden.tsWind();
         th.freeze();
         th.singSong();
-        pux.compose();
+        ((VinniPux)pux).compose();
         th.beatStick();
         pux.beatStick();
         pg.beatStick();
@@ -46,5 +48,9 @@ public class Main {
         pg.status();
         th.status();
         th.contTalk();
+        System.out.println("");
+        System.out.println(pux.toString());
+        //System.out.println(dullPlace.equals(forest));
+
     }
 }
