@@ -6,6 +6,18 @@ public class DullPlace {
     Random rd = new Random();
     public int powerWind = rd.nextInt(10);
 
+    public int getPowerWind() {
+        return powerWind;
+    }
+public int humidity = rd.nextInt(8) +1;
+
+    int koef = humidity + powerWind - tmp;
+
+    public int getKoef(){
+        return koef;
+    }
+
+
     public DullPlace(String statussnow, int tmp) {
         this.statussnow = statussnow;
         this.tmp = tmp;
@@ -21,21 +33,21 @@ public class DullPlace {
         }
         public void cold(){
             if(powerWind>8){
-            System.out.println(", но все еще было ОЧЕНЬ холодно,");
+            System.out.print(", но все еще было ОЧЕНЬ холодно.");
         } else{
-                System.out.println(", но все еще было холодно,");
+                System.out.print(", но все еще было холодно.");
             }
  }
             public class Garden {
             void tsWind(){
                 if(powerWind == 1 | powerWind == 2 | powerWind == 3){
-                    System.out.println("Кусты издавали звук: тс...");
+                    System.out.print("Кусты издавали звук: тс...");
                 }
                 else  if(powerWind == 4 | powerWind == 5 | powerWind == 6 | powerWind == 7 | powerWind == 8){
-                    System.out.println("Кусты издавали звук: ААа... ветер");
+                    System.out.print("Кусты издавали звук: ААа... ветер");
                 }
                 else {
-                    System.out.println("Кусты издавали звук: Помогите");
+                    System.out.print("Кусты издавали звук: Помогите");
                 }
             }
             }

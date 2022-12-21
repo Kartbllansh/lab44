@@ -1,4 +1,17 @@
 public enum Song {
+    STRING1("Никто, никто,"),
+    STRING2("тирлим-бомбом"),
+    STRING3("Не может догадаться,"),
+    STRING4("Куда идет премудрый гном,"),
+    STRING5("А гном идет купаться.");
+    private String name;
+    Song(String name){
+        this.name=name;
+    }
+
+    public String getName() {
+        return name;
+    }
     //* Никто, никто, тирлим-бомбом
     //Не может догадаться,
     //Куда идет премудрый гном,

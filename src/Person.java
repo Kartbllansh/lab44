@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public abstract class Person {
-    private String name;
+    public String name;
     public int HPHot;
     public Person(String name, int HPHot){
         this.name=name;
@@ -19,7 +19,7 @@ public abstract class Person {
     }
     public void turn(){
     }
-    int touch = r.nextInt(2);
+    Double touch = r.nextDouble();
     public void sitDown(){
     }
     public void freeze(){
@@ -28,6 +28,19 @@ public abstract class Person {
     }
     public void beatStick(){
     }
+    public void startHot(){
+
+    }
     public void contTalk(){
+    }
+    public int check(int HPHot){
+        return 0;
+    }
+    public void sayAbout(){
+
+    }
+    int stick = r.nextInt(40)+1;
+    public void status(){
+
     }
 }
