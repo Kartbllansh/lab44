@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Random;
 
 public class DullPlace {
@@ -26,10 +27,10 @@ public int humidity = rd.nextInt(8) +1;
 
     public class Forest {
         public String statussnow;
-          public int tmp;
+          public static int tmp; //почему без статик не работает equals
         public Forest(String statussnow, int tmp) {
             this.statussnow = statussnow;
-            this.tmp =tmp;
+            Forest.tmp =tmp;
         }
         public void cold(){
             if(powerWind>8){
@@ -38,6 +39,7 @@ public int humidity = rd.nextInt(8) +1;
                 System.out.print(", но все еще было холодно.");
             }
  }
+
             public class Garden {
             void tsWind(){
                 if(powerWind == 1 | powerWind == 2 | powerWind == 3){
@@ -56,5 +58,13 @@ public int humidity = rd.nextInt(8) +1;
 public int hight = 2;
            }
         }
-    }
+      /*  DullPlace dl = new DullPlace("aaa", -20);
+    DullPlace.Forest fr = dl.new Forest("Не идет снег", -25);
+
+    public boolean equals(Object obj){
+        DullPlace.Forest ft = (DullPlace.Forest) obj; //downcasting
+        return this.tmp > DullPlace.Forest.tmp;
+    } */
+
+        }
 

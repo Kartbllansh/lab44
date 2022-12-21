@@ -37,11 +37,17 @@ public class Pigs extends Person implements HeBother {
     public void bother() {
         System.out.print(" и ему это начинало надоедать");
     }
-
+/*HeBother pigs = new HeBother() {
+       @Override
+       public void bother() {
+           System.out.print(" и ему это начинало надоедать");
+       }
+   }; */
     @Override
     public String toString() {
-        return getName() +"а";
+        return "Поросенок";
     }
+    //Pigs pigs = new Pigs("jjj", 100);
     @Override
     public int check(int HPHot) {
         if (HPHot > 0) {
